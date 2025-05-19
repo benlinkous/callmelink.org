@@ -1,0 +1,10 @@
+title: CallMeLink.org
+description: Veteran career coaching and transition resources
+theme: minima
+
+header_pages:
+  - index.md
+  - about.md
+  - services.md
+  - resources.md
+  - contact.md
