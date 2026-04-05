@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Call Me Link — Writing from Pulaski, Virginia</title>
+<meta name="description" content="Civic writing on community, politics, and the work of showing up. From Pulaski, Virginia and the New River Valley." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --paper:#f5f0e8;
+  --paper2:#ede8dc;
+  --paper3:#e5dfd0;
+  --ink:#1a1612;
+  --ink2:#2d2820;
+  --muted:#6b6258;
+  --faint:#9e9488;
+  --rule:#c8bfb0;
+  --rust:#8b3a1a;
+  --rust-light:#a84520;
+  --rust-dim:#d4956a;
+  --sage:#3d5c35;
+  --sage-light:#527a48;
+  --gold:#8b6914;
+  --gold-light:#b8902a;
+  --serif:'Playfair Display',Georgia,serif;
+  --body:'Source Serif 4',Georgia,serif;
+  --mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);overflow-x:hidden;line-height:1.7;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;}
+
+/* MASTHEAD */
+.masthead{
+  border-bottom:3px solid var(--ink);
+  padding:0;
+  background:var(--paper);
+  position:sticky;top:0;z-index:100;
+}
+.masthead-top{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 3rem 0.75rem;
+  border-bottom:1px solid var(--rule);
+}
+.masthead-date{
+  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--faint);
+}
+.masthead-title{
+  text-align:center;
+}
+.masthead-title h1{
+  font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.8rem);
+  font-weight:900;letter-spacing:-0.01em;line-height:1;color:var(--ink);
+}
+.masthead-title h1 em{color:var(--rust);font-style:normal;}
+.masthead-tagline{
+  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--muted);margin-top:0.3rem;
+}
+.masthead-sub{
+  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--faint);text-align:right;
+}
+.masthead-nav{
+  display:flex;align-items:center;justify-content:center;
+  gap:0;border-top:1px solid var(--rule);
+  padding:0;overflow-x:auto;
+}
+.masthead-nav a{
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--muted);
+  padding:0.6rem 1.5rem;border-right:1px solid var(--rule);
+  transition:all 0.2s;white-space:nowrap;
+}
+.masthead-nav a:first-child{border-left:1px solid var(--rule);}
+.masthead-nav a:hover{background:var(--ink);color:var(--paper);}
+.nav-toggle{
+  display:none;background:none;border:none;
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--muted);cursor:pointer;
+  padding:0.6rem 1.5rem;border-left:1px solid var(--rule);
+}
+
+/* HERO / LEAD STORY */
+.lead-section{
+  max-width:1100px;margin:0 auto;
+  padding:3rem 3rem 2rem;
+  border-bottom:1px solid var(--rule);
+}
+.lead-grid{
+  display:grid;grid-template-columns:1.6fr 1fr;
+  gap:3rem;align-items:start;
+}
+.lead-kicker{
+  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--rust);margin-bottom:0.75rem;
+  display:flex;align-items:center;gap:0.75rem;
+}
+.lead-kicker::before{content:'';width:24px;height:1px;background:var(--rust);}
+.lead-headline{
+  font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.8rem);
+  font-weight:900;line-height:1.1;letter-spacing:-0.02em;
+  color:var(--ink);margin-bottom:1rem;
+}
+.lead-headline em{color:var(--rust);font-style:italic;}
+.lead-deck{
+  font-size:1.05rem;color:var(--muted);line-height:1.7;
+  margin-bottom:1.25rem;font-style:italic;
+}
+.lead-byline{
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--faint);
+  margin-bottom:1.5rem;
+}
+.lead-body p{
+  font-size:1rem;line-height:1.85;color:var(--ink2);margin-bottom:1rem;
+}
+.lead-body p:first-child::first-letter{
+  font-family:var(--serif);font-size:3.5rem;font-weight:900;
+  float:left;line-height:0.8;margin:0.1rem 0.15rem 0 0;color:var(--rust);
+}
+.read-more{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--rust);
+  border-bottom:1px solid var(--rust-dim);padding-bottom:0.2rem;
+  transition:all 0.2s;margin-top:0.5rem;
+}
+.read-more:hover{color:var(--ink);border-color:var(--ink);}
+
+/* SIDEBAR */
+.lead-sidebar{border-left:1px solid var(--rule);padding-left:2.5rem;}
+.sidebar-section{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--rule);}
+.sidebar-section:last-child{border-bottom:none;margin-bottom:0;}
+.sidebar-heading{
+  font-family:var(--mono);font-size:0.55rem;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--faint);
+  margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--rule);
+}
+.sidebar-quote{
+  font-family:var(--serif);font-size:1.15rem;font-style:italic;
+  color:var(--ink);line-height:1.6;margin-bottom:0.5rem;
+  border-left:3px solid var(--rust);padding-left:1rem;
+}
+.sidebar-attr{
+  font-family:var(--mono);font-size:0.55rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--faint);
+}
+
+.substack-box{
+  background:var(--ink);color:var(--paper);
+  padding:1.5rem;margin-bottom:1.5rem;
+}
+.substack-box h3{
+  font-family:var(--serif);font-size:1.1rem;font-weight:700;
+  margin-bottom:0.5rem;color:var(--paper);
+}
+.substack-box p{font-size:0.85rem;color:var(--paper2);line-height:1.6;margin-bottom:1rem;}
+.substack-btn{
+  display:inline-block;background:var(--rust);color:var(--paper);
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;
+  text-transform:uppercase;padding:0.6rem 1.25rem;
+  transition:background 0.2s;
+}
+.substack-btn:hover{background:var(--rust-light);}
+
+/* COLUMNS SECTION */
+.columns-section{
+  max-width:1100px;margin:0 auto;
+  padding:2.5rem 3rem;
+  border-bottom:1px solid var(--rule);
+}
+.columns-heading{
+  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.25em;
+  text-transform:uppercase;color:var(--faint);
+  margin-bottom:1.5rem;padding-bottom:0.75rem;
+  border-bottom:3px double var(--rule);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.articles-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+}
+.article-card{border-top:2px solid var(--ink);padding-top:1rem;}
+.article-tag{
+  font-family:var(--mono);font-size:0.52rem;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--rust);margin-bottom:0.5rem;
+}
+.article-headline{
+  font-family:var(--serif);font-size:1.2rem;font-weight:700;
+  line-height:1.25;color:var(--ink);margin-bottom:0.5rem;
+  transition:color 0.2s;cursor:pointer;
+}
+.article-headline:hover{color:var(--rust);}
+.article-deck{font-size:0.88rem;color:var(--muted);line-height:1.65;margin-bottom:0.75rem;}
+.article-meta{
+  font-family:var(--mono);font-size:0.52rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--faint);
+}
+
+/* INITIATIVES BAND */
+.initiatives-band{
+  background:var(--ink);color:var(--paper);
+  padding:4rem 3rem;
+}
+.initiatives-inner{max-width:1100px;margin:0 auto;}
+.initiatives-heading{
+  font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);
+  font-weight:900;color:var(--paper);margin-bottom:0.5rem;
+}
+.initiatives-sub{
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.2em;
+  text-transform:uppercase;color:var(--rust-dim);margin-bottom:2.5rem;
+}
+.initiatives-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:0;border:1px solid rgba(255,255,255,0.1);
+}
+.initiative-card{
+  padding:2rem;border-right:1px solid rgba(255,255,255,0.1);
+  transition:background 0.2s;
+}
+.initiative-card:last-child{border-right:none;}
+.initiative-card:hover{background:rgba(255,255,255,0.04);}
+.initiative-icon{font-size:1.5rem;margin-bottom:1rem;display:block;}
+.initiative-name{
+  font-family:var(--serif);font-size:1.3rem;font-weight:700;
+  color:var(--paper);margin-bottom:0.5rem;
+}
+.initiative-desc{font-size:0.875rem;color:var(--paper2);line-height:1.7;margin-bottom:1rem;}
+.initiative-tag{
+  font-family:var(--mono);font-size:0.52rem;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--rust-dim);
+  border:1px solid rgba(139,58,26,0.4);padding:0.25rem 0.6rem;
+  display:inline-block;
+}
+
+/* ABOUT STRIP */
+.about-strip{
+  max-width:1100px;margin:0 auto;
+  padding:3rem 3rem;
+  display:grid;grid-template-columns:1fr 2px 1fr;
+  gap:3rem;align-items:center;
+  border-bottom:1px solid var(--rule);
+}
+.about-rule{background:var(--rule);height:100%;}
+.about-text h2{
+  font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);
+  font-weight:900;color:var(--ink);margin-bottom:0.75rem;line-height:1.1;
+}
+.about-text p{font-size:0.95rem;color:var(--muted);line-height:1.8;margin-bottom:0.75rem;}
+.about-text p strong{color:var(--ink);}
+.about-connect h3{
+  font-family:var(--serif);font-size:1.3rem;font-weight:700;
+  color:var(--ink);margin-bottom:1rem;
+}
+.social-list{list-style:none;display:flex;flex-direction:column;gap:0;}
+.social-list li{
+  border-bottom:1px solid var(--rule);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0.6rem 0;
+}
+.social-list li:last-child{border-bottom:none;}
+.social-platform{
+  font-family:var(--mono);font-size:0.55rem;letter-spacing:0.15em;
+  text-transform:uppercase;color:var(--faint);
+}
+.social-handle{
+  font-family:var(--mono);font-size:0.65rem;color:var(--rust);
+  transition:color 0.2s;
+}
+.social-handle:hover{color:var(--ink);}
+
+/* FOOTER */
+.site-footer{
+  background:var(--ink);color:var(--paper);
+  border-top:3px solid var(--rust);
+  padding:2.5rem 3rem;
+}
+.footer-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;gap:2rem;
+}
+.footer-brand{
+  font-family:var(--serif);font-size:1.4rem;font-weight:900;color:var(--paper);
+}
+.footer-brand em{color:var(--rust-dim);font-style:normal;}
+.footer-copy{
+  font-family:var(--mono);font-size:0.55rem;letter-spacing:0.15em;
+  text-transform:uppercase;color:rgba(255,255,255,0.3);
+}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .masthead-top{padding:1rem 1.5rem 0.75rem;flex-wrap:wrap;gap:0.5rem;}
+  .masthead-date,.masthead-sub{display:none;}
+  .masthead-title{width:100%;order:-1;}
+  .nav-toggle{display:block;}
+  .masthead-nav{display:none;flex-direction:column;align-items:stretch;}
+  .masthead-nav.open{display:flex;}
+  .masthead-nav a{border-right:none;border-bottom:1px solid var(--rule);text-align:center;}
+  .masthead-nav a:first-child{border-left:none;}
+  .lead-section,.columns-section,.about-strip{padding:2rem 1.5rem;}
+  .lead-grid{grid-template-columns:1fr;}
+  .lead-sidebar{border-left:none;padding-left:0;border-top:1px solid var(--rule);padding-top:2rem;}
+  .articles-grid{grid-template-columns:1fr;}
+  .initiatives-band{padding:3rem 1.5rem;}
+  .initiatives-grid{grid-template-columns:1fr;}
+  .initiative-card{border-right:none;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .initiative-card:last-child{border-bottom:none;}
+  .about-strip{grid-template-columns:1fr;gap:2rem;}
+  .about-rule{display:none;}
+  .footer-inner{flex-direction:column;text-align:center;}
+  .site-footer{padding:2rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-top">
+    <div class="masthead-date" id="mastDate"></div>
+    <div class="masthead-title">
+      <h1>Call Me <em>Link</em></h1>
+      <div class="masthead-tagline">Writing from Pulaski, Virginia &nbsp;·&nbsp; Community · Politics · Showing Up</div>
+    </div>
+    <div class="masthead-sub">New River Valley<br>Southwest Virginia</div>
+  </div>
+  <nav class="masthead-nav" id="mastheadNav">
+    <a href="#articles">Articles</a>
+    <a href="#initiatives">Initiatives</a>
+    <a href="#good-neighbor">Good Neighbor</a>
+    <a href="#about">About</a>
+    <a href="https://substack.com/@callmelink" target="_blank" rel="noopener">Substack ↗</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle">Menu</button>
+</header>
+
+<!-- LEAD STORY -->
+<div class="lead-section">
+  <div class="lead-grid reveal">
+    <div class="lead-main">
+      <div class="lead-kicker">About This Journal · Personal Essay</div>
+      <h2 class="lead-headline">Call Me <em>Link</em></h2>
+      <p class="lead-deck">Not because it's my legal name — but because the name represents something I've tried to do throughout my life: connect things that often seem disconnected.</p>
+      <div class="lead-byline">By Ben Linkous</div>
+      <div class="lead-body">
+        <p>My name is Ben Linkous, and my life has been shaped by service, learning, and the ongoing effort to understand how individuals can contribute meaningfully to the world around them.</p>
+        <p>Until recently, I served in the United States military. Like many veterans, the transition out of service was not as smooth as I expected. Military life provides a sense of structure and mission that can be difficult to replicate once the uniform comes off. The silence of the civilian job market was difficult. It challenged my confidence and forced me to confront a kind of uncertainty that many veterans experience but few speak about openly.</p>
+        <p>I remain proud of my service — and try to speak about it honestly and without exaggeration. I can't claim I did anything particularly valorous. I fulfilled my responsibilities alongside others who did the same. But I had the privilege of serving with people who embodied courage and dedication in ways that deserve lasting respect. Standing beside them remains one of the greatest honors of my life.</p>
+        <p>One responsibility that remains deeply important to me is remembering those who did not come home. Service does not truly end when the uniform is set aside. In many ways, the deeper responsibility begins afterward: remembering those who gave everything, and honoring the lives they lived.</p>
+        <p>Writing has become a way for me to think through the ideas that shape my life — on technology and cybersecurity, media literacy and propaganda, military service and the transition to civilian life, education and leadership, and community and civic responsibility.</p>
+        <p>The name Link carries a simple meaning. A link connects two points. It bridges distance. It carries information from one place to another. I hope to connect disciplines that are often separated — technology and ethics, service and education, global events and local responsibility.</p>
+      </div>
+      <a href="https://substack.com/@callmelink" target="_blank" rel="noopener" class="read-more">Read the full story on Substack →</a>
+    </div>
+
+    <div class="lead-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-heading">From the Editor</div>
+        <div class="sidebar-quote">"A link connects two points. It bridges distance. It carries information from one place to another."</div>
+        <div class="sidebar-attr">— Call Me Link</div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="substack-box">
+          <h3>Read Every Issue</h3>
+          <p>New essays on community, politics, and civic life — delivered to your inbox from Pulaski, Virginia.</p>
+          <a href="https://substack.com/@callmelink" target="_blank" rel="noopener" class="substack-btn">Subscribe on Substack</a>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-heading">In This Journal</div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+          <div style="border-bottom:1px solid var(--rule);padding-bottom:0.75rem;">
+            <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--faint);margin-bottom:0.25rem;">Community</div>
+            <div style="font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--ink);">The Good Neighbor Project</div>
+          </div>
+          <div style="border-bottom:1px solid var(--rule);padding-bottom:0.75rem;">
+            <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--faint);margin-bottom:0.25rem;">Civic Action</div>
+            <div style="font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--ink);">From the Lightbulb to the Shovel</div>
+          </div>
+          <div style="border-bottom:1px solid var(--rule);padding-bottom:0.75rem;">
+            <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--faint);margin-bottom:0.25rem;">Downtown Pulaski</div>
+            <div style="font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--ink);">Frozen in Time and Moving Forward</div>
+          </div>
+          <div>
+            <div style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--faint);margin-bottom:0.25rem;">Coming Soon</div>
+            <div style="font-family:var(--serif);font-size:0.95rem;font-weight:700;color:var(--ink);opacity:0.5;">Coalition of Faith</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLES GRID -->
+<div class="columns-section" id="articles">
+  <div class="columns-heading">
+    <span>Recent Writing</span>
+    <a href="https://substack.com/@callmelink" target="_blank" rel="noopener" style="font-family:var(--mono);font-size:0.52rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--rust);">All Articles on Substack →</a>
+  </div>
+  <div class="articles-grid reveal">
+    <div class="article-card">
+      <div class="article-tag">Civic Action</div>
+      <div class="article-headline">From the Lightbulb to the Shovel: A Path Forward for Pulaski</div>
+      <p class="article-deck">Real change in a town does not come from ideas alone. It comes from the small, practical steps that turn a lightbulb moment into something real on Main Street.</p>
+      <div class="article-meta">Ben Linkous &nbsp;·&nbsp; 2026</div>
+    </div>
+    <div class="article-card">
+      <div class="article-tag">Community</div>
+      <div class="article-headline">Frozen in Time and Moving Forward</div>
+      <p class="article-deck">Walking into Star Barber Shop feels like stepping back into a different era of Pulaski. But nostalgia alone won't move a town forward — and neither will critique without credit.</p>
+      <div class="article-meta">Ben Linkous &nbsp;·&nbsp; 2026</div>
+    </div>
+    <div class="article-card">
+      <div class="article-tag">Good Neighbor Project</div>
+      <div class="article-headline">The Good Neighbor Project</div>
+      <p class="article-deck">If you want to improve the world, start by improving the place where you actually live. For me, that place is Pulaski — and it starts with knowing your neighbors.</p>
+      <div class="article-meta">Ben Linkous &nbsp;·&nbsp; 2026</div>
+    </div>
+  </div>
+</div>
+
+<!-- TOPICS -->
+<div style="background:var(--paper2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:3rem 3rem;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="font-family:var(--mono);font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--faint);margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:3px double var(--rule);">Through Essays and Reflections, I Explore</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--rule);">
+      <div style="padding:1.25rem 1.5rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+        <div style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem;">Technology &amp; Cybersecurity</div>
+        <div style="font-size:0.8rem;color:var(--muted);">How digital systems shape modern life, security, and national defense.</div>
+      </div>
+      <div style="padding:1.25rem 1.5rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+        <div style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem;">Media Literacy &amp; Propaganda</div>
+        <div style="font-size:0.8rem;color:var(--muted);">Disinformation, narrative, and cultivating discernment in a noisy world.</div>
+      </div>
+      <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--rule);">
+        <div style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem;">Military Service &amp; Transition</div>
+        <div style="font-size:0.8rem;color:var(--muted);">The honest story of service, what follows it, and honoring those who gave everything.</div>
+      </div>
+      <div style="padding:1.25rem 1.5rem;border-right:1px solid var(--rule);">
+        <div style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem;">Education &amp; Leadership</div>
+        <div style="font-size:0.8rem;color:var(--muted);">Teaching, mentoring, and helping young people find purpose and direction.</div>
+      </div>
+      <div style="padding:1.25rem 1.5rem;border-right:1px solid var(--rule);">
+        <div style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem;">Community &amp; Civic Responsibility</div>
+        <div style="font-size:0.8rem;color:var(--muted);">Local action, showing up, and the work of building towns worth living in.</div>
+      </div>
+      <div style="padding:1.25rem 1.5rem;">
+        <div style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem;">Politics &amp; the Middle</div>
+        <div style="font-size:0.8rem;color:var(--muted);">Practical progress over ideological battle — and the 80% that already agrees.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- INITIATIVES -->
+<div class="initiatives-band" id="initiatives">
+  <div class="initiatives-inner">
+    <h2 class="initiatives-heading">Ideas Into Action</h2>
+    <div class="initiatives-sub">The projects behind the writing</div>
+    <div class="initiatives-grid reveal">
+      <div class="initiative-card" id="good-neighbor">
+        <span class="initiative-icon">🏘️</span>
+        <div class="initiative-name">The Good Neighbor Project</div>
+        <p class="initiative-desc">A simple premise: if you want to improve the world, start by improving the place where you actually live. Getting to know your neighbors. Paying attention to your town. Showing up where decisions are made. Focusing on the 80 percent that brings communities together.</p>
+        <span class="initiative-tag">Pulaski, VA</span>
+      </div>
+      <div class="initiative-card">
+        <span class="initiative-icon">✝️</span>
+        <div class="initiative-name">Coalition of Faith</div>
+        <p class="initiative-desc">Faith communities are among the most powerful civic institutions in small towns. The Coalition of Faith brings churches and faith organizations together around shared community goals — the things most people already agree are worth doing. <em style="color:rgba(255,255,255,0.4);font-size:0.82rem;">Coming soon.</em></p>
+        <span class="initiative-tag">NRV Region</span>
+      </div>
+      <div class="initiative-card">
+        <span class="initiative-icon">📡</span>
+        <div class="initiative-name">Why Call Me Link?</div>
+        <p class="initiative-desc">The name carries a meaning — about connection, about being the person who links ideas to action and neighbors to each other. The story behind the name is also the story behind the work. <em style="color:rgba(255,255,255,0.4);font-size:0.82rem;">Coming soon.</em></p>
+        <span class="initiative-tag">The Story</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="about-strip" id="about">
+  <div class="about-text reveal">
+    <h2>Writing from the Middle of It</h2>
+    <p>I'm Ben Linkous — a <strong>retired Army Master Sergeant</strong> who has lived in Pulaski nearly his entire life. I grew up riding bikes on Lake Street, was a bat boy at Calfee Park, and have watched this town change over decades.</p>
+    <p>I write because I believe that <strong>the most important conversations aren't happening in Washington</strong> — they're happening in town halls, on porches, and at Planning Commission meetings where very few people show up.</p>
+    <p>I serve on the Pulaski Planning Commission. I run NRV Managed IT. I'm building things I hope make a difference. This is where I think out loud about all of it.</p>
+    <a href="https://benlinkous.com" style="font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--rust);border-bottom:1px solid var(--rust-dim);padding-bottom:0.15rem;">Full bio at benlinkous.com →</a>
+  </div>
+  <div class="about-rule"></div>
+  <div class="about-connect reveal">
+    <h3>Connect</h3>
+    <ul class="social-list">
+      <li>
+        <span class="social-platform">Substack</span>
+        <a href="https://substack.com/@callmelink" target="_blank" rel="noopener" class="social-handle">@callmelink</a>
+      </li>
+      <li>
+        <span class="social-platform">LinkedIn</span>
+        <a href="https://linkedin.com/in/benlinkous" target="_blank" rel="noopener" class="social-handle">benlinkous</a>
+      </li>
+      <li>
+        <span class="social-platform">Threads</span>
+        <a href="https://threads.net/@benlinkous76" target="_blank" rel="noopener" class="social-handle">@benlinkous76</a>
+      </li>
+      <li>
+        <span class="social-platform">Instagram</span>
+        <a href="https://instagram.com/benlinkous.76" target="_blank" rel="noopener" class="social-handle">benlinkous.76</a>
+      </li>
+      <li>
+        <span class="social-platform">Facebook</span>
+        <a href="https://facebook.com/ben.linkous.92" target="_blank" rel="noopener" class="social-handle">ben.linkous.92</a>
+      </li>
+      <li>
+        <span class="social-platform">Email</span>
+        <a href="mailto:callmelink@benlinkous.com" class="social-handle">callmelink@benlinkous.com</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">Call Me <em>Link</em></div>
+    <div class="footer-copy">© <span id="yr"></span> Ben Linkous &nbsp;·&nbsp; Pulaski, Virginia &nbsp;·&nbsp; New River Valley</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// Date in masthead
+const d = new Date();
+document.getElementById('mastDate').textContent = d.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+
+// Mobile nav
+const toggle = document.getElementById('navToggle');
+const nav = document.getElementById('mastheadNav');
+toggle.addEventListener('click',()=>{
+  nav.classList.toggle('open');
+  toggle.textContent = nav.classList.contains('open') ? 'Close' : 'Menu';
+});
+
+// Reveals
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
